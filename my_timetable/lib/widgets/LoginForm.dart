@@ -23,70 +23,77 @@ class LoginFormState extends State<LoginForm> {
     // Build a Form widget using the _formKey created above.
     return Form(
         key: _formKey,
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: <Widget>[
-            TextFormField(
-              decoration: InputDecoration(
-                  labelText: 'Enter your username',
-                  icon: Icon(Icons.lock, color: Colors.black),
-              ),
-              // The validator receives the text that the user has entered.
-              validator: (value) {
-                if (value.isEmpty) {
-                  return 'Please enter some text';
-                }
-                return null;
-              },
-            ),
-            TextFormField(
-              decoration: InputDecoration(
-                  labelText: 'Enter your password',
-                  icon: Icon(Icons.account_circle, color: Colors.black),
-              ),
-              // The validator receives the text that the user has entered.
-              validator: (value) {
-                if (value.isEmpty) {
-                  return 'Please enter some text';
-                }
-                return null;
-              },
-            ),
-            Row(
-              mainAxisSize: MainAxisSize.max,
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: <Widget>[
-                RaisedButton(
-                  onPressed: () {
-                  // Validate returns true if the form is valid, otherwise false.
-                  if (_formKey.currentState.validate()) {
-                  // If the form is valid, display a snackbar. In the real world,
-                  // you'd often call a server or save the information in a database.
-
-                  Scaffold
-                      .of(context)
-                      .showSnackBar(SnackBar(content: Text('Processing Data')));
-                  }
-                  },
-                  child: Text('Submit'),
+        child: Container(
+          margin: EdgeInsets.only(left: 10, right: 10),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisSize: MainAxisSize.max,
+            children: <Widget>[
+              TextFormField(
+                decoration: InputDecoration(
+                    labelText: 'Enter your username',
+                    icon: Icon(Icons.lock, color: Colors.black),
                 ),
-                RaisedButton(
-                  onPressed: () {
-                    // Validate returns true if the form is valid, otherwise false.
-                    if (_formKey.currentState.validate()) {
+                // The validator receives the text that the user has entered.
+                validator: (value) {
+                  if (value.isEmpty) {
+                    return 'Please enter some text';
+                  }
+                  return null;
+                },
+              ),
+              TextFormField(
+                decoration: InputDecoration(
+                    labelText: 'Enter your password',
+                    icon: Icon(Icons.account_circle, color: Colors.black),
+                ),
+                // The validator receives the text that the user has entered.
+                validator: (value) {
+                  if (value.isEmpty) {
+                    return 'Please enter some text';
+                  }
+                  return null;
+                },
+              ),
+              Expanded(
+                child: Row(
+                  mainAxisSize: MainAxisSize.max,
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: <Widget>[
+                    RaisedButton(
+                      color: Colors.redAccent,
+                      onPressed: () {
+                      // Validate returns true if the form is valid, otherwise false.
+                      if (_formKey.currentState.validate()) {
                       // If the form is valid, display a snackbar. In the real world,
                       // you'd often call a server or save the information in a database.
 
                       Scaffold
                           .of(context)
                           .showSnackBar(SnackBar(content: Text('Processing Data')));
-                    }
-                  },
-                  child: Text('Submit'),
+                      }
+                      },
+                      child: Text('Register', style: TextStyle(color: Colors.white),),
+                    ),
+                    RaisedButton(
+                      color: Colors.redAccent,
+                      onPressed: () {
+                        // Validate returns true if the form is valid, otherwise false.
+                        if (_formKey.currentState.validate()) {
+                          // If the form is valid, display a snackbar. In the real world,
+                          // you'd often call a server or save the information in a database.
+
+                          Scaffold
+                              .of(context)
+                              .showSnackBar(SnackBar(content: Text('Processing Data')));
+                        }
+                      },
+                      child: Text('Login', style: TextStyle(color: Colors.white),),                    ),
+                  ],
                 ),
-              ],
-            )
-          ],
+              )
+            ],
+          ),
         )
     );
   }

@@ -9,8 +9,7 @@ class MyTimetable extends StatelessWidget{
   Widget build(BuildContext context) {
     return new MaterialApp(
       title: 'MyTimetable',
-      theme: new ThemeData(
-        primarySwatch: Colors.red,
+      theme: new ThemeData.light(
       ),
       routes: routes,
     );
