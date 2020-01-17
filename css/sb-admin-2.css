@@ -1,3 +1,125 @@
+/* added css */
+
+.bottoni-update
+{
+  width: 45% !important;
+  margin: 5px !important;
+  height: 100% !important;
+}
+
+/* The Modal (background) */
+.modal 
+{
+  display: none; 
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.update-modal 
+{
+  display: block; 
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content 
+{
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  width: 100%; /* Could be more or less, depending on screen size */
+  padding: 0px !important;
+}
+
+.modal-title
+{
+  padding-top: 5px;
+  float: left
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus 
+{
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#dataTable_filter
+{
+  float: right !important;
+  width: 40%;
+}
+
+#dataTable_length
+{
+  width: 40% !important;
+  float: left;
+}
+
+#dataTable_paginate
+{
+  margin-top: 10px;
+}
+
+button.dt-button.btn.btn-secondary.btn-icon-split
+{
+  width: 45%;
+  padding: 3px;
+  display: block;
+  margin: auto;
+}
+
+button.dt-button.btn.btn-primary.btn-icon-split
+{
+  width: 45%;
+  padding: 3px;
+  display: block;
+  margin: auto;
+  margin-top: 4px ;
+}
+
+.dt-buttons
+{
+  width: 20%;
+  margin: auto;
+  float: right;
+}
+
+.selected
+{
+  background-color: aliceblue;
+  cursor: pointer;
+}
+
+
+
+
+
+
+
 /*!
  * Start Bootstrap - SB Admin 2 v4.0.7 (https://startbootstrap.com/template-overviews/sb-admin-2)
  * Copyright 2013-2019 Start Bootstrap
