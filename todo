@@ -2,5 +2,5 @@ PER RELAZIONE
     - ricorda di scrivere che non hai implementato l'autenticazione degli utenti, ma del singolo utente alepistola come dimostrazione, se si vuole testare l'api con altri utenti, nella documentazione dell'api vi sono diverse implementazioni di diversi client in differenti linguaggi
     - la velocità di caricamento lenta è dovuta a glitch e non al client
     - uno dei futuri improvement potrebbe essere creare un endpoint statistiche per ritornare tutte le informazioni utilizzate nella dashboard in quanto allo stato attuale delle cose, vengono compiute 3 richieste get
-    - aggiungi un bold nella visualizzazione da modal
     - eliminara parametri nell'url quando usati
+    - aggiorna i menù di ogni pagina
