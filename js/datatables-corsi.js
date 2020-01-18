@@ -116,7 +116,7 @@ $(document).ready(function() {
             ),
             url: 'https://wobbly-earwig.glitch.me/api/corsi/' + params.codice,
             success: function (obj, textstatus) {
-                apriPannello("Modifica avvenuta con successo", "Modificato correttamente il corso con codice " + params.codice);
+                apriPannello("Modifica avvenuta con successo", "Modificato correttamente il corso con codice <b>" + params.codice + "</b>");
                 getData();
             },
             error: function () {
@@ -142,7 +142,7 @@ $(document).ready(function() {
             ),
             url: 'https://wobbly-earwig.glitch.me/api/corsi',
             success: function (obj, textstatus) {
-                apriPannello("Inserimento avvenuto con successo", "Inserito correttamente il corso " + params.titolo);
+                apriPannello("Inserimento avvenuto con successo", "Inserito correttamente il corso <b>" + params.titolo + "</b>");
                 getData();
             },
             error: function () {
@@ -198,7 +198,7 @@ function getData()
                                       url: vurl,
                                       success: function(result){
                                           dataTable.row('.selected').remove().draw( false );
-                                          apriPannello("Eliminazione avvenuta con successo", "Eliminato correttamente il corso: " + rowData.titolo);
+                                          apriPannello("Eliminazione avvenuta con successo", "Eliminato correttamente il corso: <b>" + rowData.titolo + "</b>");
                                       },
                                       error: function(){
                                           alert("Si è verificato un errore durante la rimozione del corso: "+ rowData.titolo);

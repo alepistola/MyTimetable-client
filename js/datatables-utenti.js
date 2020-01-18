@@ -21,7 +21,7 @@ $(document).ready(function() {
             ),
             url: 'https://wobbly-earwig.glitch.me/api/utenti/' + params.vUsername,
             success: function (obj, textstatus) {
-                apriPannello("Modifica avvenuta con successo", "Modificato correttamente l'utente con username " + params.vUsername);
+                apriPannello("Modifica avvenuta con successo", "Modificato correttamente l'utente con username <b>" + params.vUsername + "</b>");
                 getData();
             },
             error: function () {
@@ -46,7 +46,7 @@ $(document).ready(function() {
             ),
             url: 'https://wobbly-earwig.glitch.me/api/utenti',
             success: function (obj, textstatus) {
-                apriPannello("Inserimento avvenuto con successo", "Inserito correttamente l'utente " + params.username);
+                apriPannello("Inserimento avvenuto con successo", "Inserito correttamente l'utente <b>" + params.username + "</b>");
                 getData();
             },
             error: function () {
@@ -102,7 +102,7 @@ function getData()
                                       url: vurl,
                                       success: function(result){
                                           dataTable.row('.selected').remove().draw( false );
-                                          apriPannello("Eliminazione avvenuta con successo", "Eliminato correttamente l'utente: " + rowData.username);
+                                          apriPannello("Eliminazione avvenuta con successo", "Eliminato correttamente l'utente: <b>" + rowData.username + "</b>");
                                       },
                                       error: function(){
                                           alert("Si è verificato un errore durante la rimozione dell'utente: "+ rowData.username);
