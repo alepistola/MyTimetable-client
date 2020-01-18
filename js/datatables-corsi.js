@@ -147,6 +147,7 @@ $(document).ready(function() {
             },
             error: function () {
                 alert("Si è verificato un errore durante l'inserimento del corso " + params.titolo + "\nRiprovare ad eseguire l'operazione.");
+                getData();
             }
         });
     }
