@@ -5,26 +5,28 @@ $(document).ready(function() {
 
     if(params.typeOp == "Salva")
     {
+        console.log(params);
         $.ajax({
             type: "PUT",
             contentType: 'application/json',
             data: JSON.stringify(
                 { 
-                    "codice": params.codice,
-                    "titolo" : params.titolo,
-                    "descrizione" : params.descrizione,
-                    "cfu": params.cfu,
-                    "programma": params.programma,
+                    "username": params.username,
+                    "nome" : params.nome,
+                    "cognome" : params.cognome,
+                    "password": params.password,
+                    "corso_di_studio": params.corso_di_studio,
                     "codice_orario": params.codice_orario
                 }
             ),
-            url: 'https://wobbly-earwig.glitch.me/api/corsi/' + params.codice,
+            url: 'https://wobbly-earwig.glitch.me/api/utenti/' + params.vUsername,
             success: function (obj, textstatus) {
-                apriPannello("Modifica avvenuta con successo", "Modificato correttamente il corso con codice " + params.codice);
+                apriPannello("Modifica avvenuta con successo", "Modificato correttamente l'utente con username " + params.vUsername);
                 getData();
             },
             error: function () {
-                alert("Si è verificato un errore durante la modifica del corso " + params.titolo + "\nRiprovare ad eseguire l'operazione.");
+                alert("Si è verificato un errore durante la modifica dell'utente " + params.vUsername + "\nRiprovare ad eseguire l'operazione.");
+                getData();
             }
         });
     }
