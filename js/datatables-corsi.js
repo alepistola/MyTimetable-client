@@ -155,8 +155,6 @@ $(document).ready(function() {
     {
         getData();
     }
-
-    
 });
 
 function getData()
@@ -215,8 +213,12 @@ function getData()
         },
         error: function (obj, textstatus) {
             alert(obj.msg);
+            window.location.search = "";
         }
       });
+
+      pulisciSearch();
+
 }
 
 function apriPannello(data1, data)
@@ -258,5 +260,13 @@ function transformToAssocArray( prmstr ) {
       params[tmparr[0]] = tmparr[1].replace(/\+/gi, " ");
   }
   return params;
+}
+
+function pulisciSearch()
+{
+    if (window.location.search != "")
+    {
+        window.location.search == "";
+    }
 }
 
