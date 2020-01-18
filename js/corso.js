@@ -1,13 +1,13 @@
 $(document).ready(function() {
 
     var params = getSearchParameters();
-    document.getElementById("titolo").innerHTML = params.titolo;
+    document.getElementById("titolo").innerHTML = decodeURI(params.titolo);
     document.getElementById("codiceText").value = params.codice;
-    document.getElementById("titoloText").value = params.titolo;
-    document.getElementById("descrizioneText").innerHTML = params.descrizione;
+    document.getElementById("titoloText").value = decodeURI(params.titolo);
+    document.getElementById("descrizioneText").innerHTML = decodeURI(params.descrizione);
     document.getElementById("cfuText").value = params.cfu;
     document.getElementById("codice_orarioText").value = params.codice_orario;
-    document.getElementById("programmaText").innerHTML = params.programma;
+    document.getElementById("programmaText").innerHTML = decodeURI(params.programma);
 });
 
 function getSearchParameters() {
