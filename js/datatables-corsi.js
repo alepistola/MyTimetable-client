@@ -121,6 +121,7 @@ $(document).ready(function() {
             },
             error: function () {
                 alert("Si è verificato un errore durante la modifica del corso " + params.titolo + "\nRiprovare ad eseguire l'operazione.");
+                getData();
             }
         });
     }
