@@ -100,10 +100,10 @@ function getData()
                                       url: vurl,
                                       success: function(result){
                                           dataTable.row('.selected').remove().draw( false );
-                                          apriPannello("Eliminazione avvenuta con successo", "Eliminato correttamente il corso: " + rowData.titolo);
+                                          apriPannello("Eliminazione avvenuta con successo", "Eliminato correttamente l'utente: " + rowData.username);
                                       },
                                       error: function(){
-                                          alert("Si è verificato un errore durante la rimozione del corso: "+ rowData.titolo);
+                                          alert("Si è verificato un errore durante la rimozione dell'utente: "+ rowData.username);
                                       } 
                                   });
                               }
