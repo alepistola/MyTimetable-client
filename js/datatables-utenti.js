@@ -37,21 +37,21 @@ $(document).ready(function() {
             contentType: 'application/json',
             data: JSON.stringify(
                 { 
-                    "codice": params.codice,
-                    "titolo" : params.titolo,
-                    "descrizione" : params.descrizione,
-                    "cfu": params.cfu,
-                    "programma": params.programma,
-                    "codice_orario": params.codice_orario
+                    "username": params.username,
+                    "nome" : params.nome,
+                    "cognome" : params.cognome,
+                    "password": params.password,
+                    "corso_di_studio": params.corso_di_studio
                 }
             ),
-            url: 'https://wobbly-earwig.glitch.me/api/corsi',
+            url: 'https://wobbly-earwig.glitch.me/api/utenti',
             success: function (obj, textstatus) {
-                apriPannello("Inserimento avvenuto con successo", "Inserito correttamente il corso " + params.titolo);
+                apriPannello("Inserimento avvenuto con successo", "Inserito correttamente l'utente " + params.username);
                 getData();
             },
             error: function () {
-                alert("Si è verificato un errore durante l'inserimento del corso " + params.titolo + "\nRiprovare ad eseguire l'operazione.");
+                alert("Si è verificato un errore durante l'inserimento dell'utente " + params.username + "\nRiprovare ad eseguire l'operazione.");
+                getData();
             }
         });
     }
