@@ -98,7 +98,7 @@ function getData()
                           className: 'btn btn-primary btn-icon-split',
                           action: function () {
                               var rowData = dataTable.row('.selected').data();
-                              let vurl = "https://wobbly-earwig.glitch.me/api/utenti/" + rowData.username
+                              let vurl = "https://wobbly-earwig.glitch.me/api/frequentare/" + rowData.username
                               if(rowData !== undefined)
                               {
                                   $.ajax({
@@ -109,10 +109,10 @@ function getData()
                                       url: vurl,
                                       success: function(result){
                                           dataTable.row('.selected').remove().draw( false );
-                                          apriPannello("Eliminazione avvenuta con successo", "Eliminato correttamente l'utente: <b>" + rowData.username + "</b>");
+                                          apriPannello("Eliminazione avvenuta con successo", "Eliminata correttamente l'associazione: <b>" + rowData.id + "</b>");
                                       },
                                       error: function(){
-                                          alert("Si è verificato un errore durante la rimozione dell'utente: "+ rowData.username);
+                                          apriPannello("Errore", "Si è verificato un errore durante la rimozione dell'associazione: "+ rowData.id);
                                       } 
                                   });
                               }
