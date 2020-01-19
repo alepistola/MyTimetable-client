@@ -84,7 +84,7 @@ function getData()
                               var rowData = dataTable.row('.selected').data();
                               if(rowData !== undefined)
                               {
-                                  $.redirect('utente.html', rowData, "GET");
+                                  $.redirect('utente.php', rowData, "GET");
                               }
                               
                           }

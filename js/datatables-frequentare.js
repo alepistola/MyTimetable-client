@@ -89,7 +89,7 @@ function getData()
                               var rowData = dataTable.row('.selected').data();
                               if(rowData !== undefined)
                               {
-                                  $.redirect('frequenta.html', rowData, "GET");
+                                  $.redirect('frequenta.php', rowData, "GET");
                               }
                               
                           }

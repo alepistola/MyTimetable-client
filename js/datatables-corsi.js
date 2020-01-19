@@ -178,7 +178,7 @@ function getData()
                               var rowData = dataTable.row('.selected').data();
                               if(rowData !== undefined)
                               {
-                                  $.redirect('corso.html', rowData, "GET");
+                                  $.redirect('corso.php', rowData, "GET");
                               }
                               
                           }
