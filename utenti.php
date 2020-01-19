@@ -95,20 +95,6 @@
       <!-- Divider -->
       <hr class="sidebar-divider d-none d-md-block">
 
-      <!-- Heading -->
-      <div class="sidebar-heading">
-        Frequentare
-      </div>
-
-      <!-- Nav Item - associazioni -->
-      <li class="nav-item">
-        <a class="nav-link" href="frequentare.php">
-          <i class="fas fa-book"></i>
-          <span>Lista associazioni</span></a>
-      </li>
-
-      <!-- Divider -->
-      <hr class="sidebar-divider d-none d-md-block">
 
       <!-- Sidebar Toggler (Sidebar) -->
       <div class="text-center d-none d-md-inline">
