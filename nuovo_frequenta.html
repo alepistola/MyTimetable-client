@@ -71,25 +71,10 @@
       </div>
 
       <!-- Nav Item - Tables -->
-      <li class="nav-item">
+      <li class="nav-item active">
         <a class="nav-link" href="corsi.html">
           <i class="fas fa-fw fa-table"></i>
           <span>Lista corsi</span></a>
-      </li>
-
-      <!-- Divider -->
-      <hr class="sidebar-divider d-none d-md-block">
-
-      <!-- Heading -->
-      <div class="sidebar-heading">
-        Frequentare
-      </div>
-
-      <!-- Nav Item - associazioni -->
-      <li class="nav-item active">
-        <a class="nav-link" href="frequentare.html">
-          <i class="fas fa-book"></i>
-          <span>Lista associazioni</span></a>
       </li>
 
       <!-- Divider -->
@@ -189,35 +174,48 @@
         <!-- Begin Page Content -->
         <div class="container-fluid">
 
-                <!-- Page Heading -->
-                <h1 class="h3 mb-2 text-gray-800">Corsi seguiti dallo studente <b>alepistola</b></h1>
-                <p class="mb-4">Da qui è possibile visualizzare, modificare ed eliminare tutti i corsi universitari che si frequentano. Per aggiungere un nuovo corso universitario alla propria carriera bisogna compilare il form presente alla pagina <a  href="nuovo_frequenta.html">aggiungi un corso</a>.</p>
-      
-                <!-- DataTales Example -->
-                <div class="card shadow mb-4">
-                  <div class="card-header py-3">
-                    <h6 class="m-0 font-weight-bold text-primary">Elenco corsi frequentati</h6>
-                  </div>
-                  <div class="card-body">
-                    <div class="table-responsive">
-                      <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                        <thead>
-                          <tr>
-                            <th>Id</th>
-                            <th>Username</th>
-                            <th>Codice corso</th>
-                            <th>Aula</th>
-                          </tr>
-                        </thead>
-                      </table>
+            <!-- Page Heading -->
+			<h1 class="h3 mb-2 text-gray-800">Modifica l'associazione al corso: </h1><h1 id="titolo" class="h3 mb-2 text-primary"></h1>
+			<p class="mb-4">Modifica i valori qui sotto riportati e premi "salva" per confermare l'operazione, "annulla" per tornare indietro</p>
+        
+            <form class="user" action="frequentare.html" method="get">
+
+                <div class="form-group row">
+                    <div class="col-sm-2 mb-3 mb-sm-0">
+                        <input readonly type="number" class="form-control form-control-user"  id="idText" name="id" value="">
+                        <small class="form-text text-muted ml-4">Id</small>
                     </div>
-                  </div>
+                    <div class="col-sm-4 mb-3 mb-sm-0">
+                        <input readonly type="text" class="form-control form-control-user" id="usernameText" name="username" value="alepistola">
+                        <small class="form-text text-muted ml-4">Username</small>
+                    </div>
                 </div>
+
+                <div class="form-group row">
+                    <div class="col-sm-4">
+                        <select class="custom-select combo-add" name="codice_corso" id="codice_corsoText">
+                            <option selected>Seleziona il corso</option>
+                        </select>
+                        <small class="form-text text-muted ml-4">Codice corso</small>
+                    </div>
+                    <div class="col-sm-4">
+                        <input type="text" class="form-control form-control-user" id= "aulaText" name="aula" value="">
+                        <small class="form-text text-muted ml-4">Aula</small>
+                    </div>
+                </div>
+
+
+                <div class="mb-2 mt-4 row col-sm-12 col-12 col-md-12 col-lg-6 col-xl-6" style="float:right">
+                    <input type="submit" class="btn btn-primary btn-user btn-block bottoni-update" name="typeOp" value="Annulla">
+                    <input type="submit" class="btn btn-primary btn-user btn-block bottoni-update" name="typeOp" value="Inserisci">
+                </div>
+            </form>
+                
       
-              </div>
+        </div>
               <!-- /.container-fluid -->
       
-            </div>
+        </div>
             <!-- End of Main Content -->
 
       <!-- Footer -->
@@ -253,6 +251,7 @@
     </div>
   </div>
 
+
   <!-- Logout Modal-->
   <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
@@ -281,16 +280,10 @@
 
   <!-- Custom scripts for all pages-->
   <script src="js/sb-admin-2.min.js"></script>
+  <script src="js/nuovo_frequenta.js"></script>
 
-  <!-- Page level plugins -->
-  <script src="vendor/datatables/jquery.dataTables.min.js"></script>
-  <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
-  <script src="https://cdn.datatables.net/select/1.3.0/js/dataTables.select.min.js"></script>
-  <script src="https://cdn.datatables.net/buttons/1.5.6/js/dataTables.buttons.min.js"></script>
-  <script src="js/jquery.redirect.js"></script>
 
-  <!-- Page level custom scripts -->
-  <script src="js/datatables-frequentare.js"></script>
+
 
 </body>
 

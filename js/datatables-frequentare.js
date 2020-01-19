@@ -36,22 +36,23 @@ $(document).ready(function() {
         $.ajax({
             type: "POST",
             contentType: 'application/json',
+            headers: {
+                "Authorization": "Basic " + btoa("alepistola" + ":" + "password")
+            },
             data: JSON.stringify(
                 { 
-                    "username": params.username,
-                    "nome" : params.nome,
-                    "cognome" : params.cognome,
-                    "password": params.password,
-                    "corso_di_studio": params.corso_di_studio
+                    "id" : params.id,
+                    "codice_corso" : params.codice_corso,
+                    "aula": params.aula,
                 }
             ),
-            url: 'https://wobbly-earwig.glitch.me/api/utenti',
+            url: 'https://wobbly-earwig.glitch.me/api/frequentare/alepistola',
             success: function (obj, textstatus) {
-                apriPannello("Inserimento avvenuto con successo", "Inserito correttamente l'utente <b>" + params.username + "</b>");
+                apriPannello("Inserimento avvenuto con successo", "Inserita correttamente l'associazione <b>" + params.id + "</b>");
                 getData();
             },
             error: function () {
-                alert("Si è verificato un errore durante l'inserimento dell'utente " + params.username + "\nRiprovare ad eseguire l'operazione.");
+                apriPannello("Errore", "Si è verificato un errore durante l'inserimento dell'associazione <b>" + params.id + "</b>\nRiprovare ad eseguire l'operazione.");
                 getData();
             }
         });
