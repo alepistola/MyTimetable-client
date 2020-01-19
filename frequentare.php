@@ -29,7 +29,7 @@
     <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
       <!-- Sidebar - Brand -->
-      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php">
         <div class="sidebar-brand-icon">
           <i class="fa fa-bookmark"></i>
         </div>
@@ -41,7 +41,7 @@
 
       <!-- Nav Item - Dashboard -->
       <li class="nav-item">
-        <a class="nav-link" href="index.html">
+        <a class="nav-link" href="index.php">
           <i class="fas fa-fw fa-tachometer-alt"></i>
           <span>Dashboard</span></a>
       </li>
@@ -56,7 +56,7 @@
 
       <!-- Nav Item - Charts -->
       <li class="nav-item">
-        <a class="nav-link" href="utenti.html">
+        <a class="nav-link" href="utenti.php">
           <i class="fas fa-users"></i>
           <span> Lista utenti</span></a>
       </li>
@@ -72,7 +72,7 @@
 
       <!-- Nav Item - Tables -->
       <li class="nav-item">
-        <a class="nav-link" href="corsi.html">
+        <a class="nav-link" href="corsi.php">
           <i class="fas fa-fw fa-table"></i>
           <span>Lista corsi</span></a>
       </li>
@@ -87,7 +87,7 @@
 
       <!-- Nav Item - associazioni -->
       <li class="nav-item active">
-        <a class="nav-link" href="frequentare.html">
+        <a class="nav-link" href="frequentare.php">
           <i class="fas fa-book"></i>
           <span>Lista associazioni</span></a>
       </li>
@@ -191,7 +191,7 @@
 
                 <!-- Page Heading -->
                 <h1 class="h3 mb-2 text-gray-800">Corsi seguiti dallo studente <b>alepistola</b></h1>
-                <p class="mb-4">Da qui è possibile visualizzare, modificare ed eliminare tutti i corsi universitari che si frequentano. Per aggiungere un nuovo corso universitario alla propria carriera bisogna compilare il form presente alla pagina <a  href="nuovo_frequenta.html">aggiungi un corso</a>.</p>
+                <p class="mb-4">Da qui è possibile visualizzare, modificare ed eliminare tutti i corsi universitari che si frequentano. Per aggiungere un nuovo corso universitario alla propria carriera bisogna compilare il form presente alla pagina <a  href="nuovo_frequenta.php">aggiungi un corso</a>.</p>
       
                 <!-- DataTales Example -->
                 <div class="card shadow mb-4">
@@ -266,7 +266,7 @@
         <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
         <div class="modal-footer">
           <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-          <a class="btn btn-primary" href="login.html">Logout</a>
+          <a class="btn btn-primary" href="login.php">Logout</a>
         </div>
       </div>
     </div>
