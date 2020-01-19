@@ -9,23 +9,24 @@ $(document).ready(function() {
         $.ajax({
             type: "PUT",
             contentType: 'application/json',
+            headers: {
+                "Authorization": "Basic " + btoa("alepistola" + ":" + "password")
+            },
             data: JSON.stringify(
                 { 
-                    "username": params.username,
-                    "nome" : params.nome,
-                    "cognome" : params.cognome,
-                    "password": params.password,
-                    "corso_di_studio": params.corso_di_studio,
-                    "codice_orario": params.codice_orario
+                    "id": params.id,
+                    "username" : params.username,
+                    "codice_corso" : params.codice_corso,
+                    "aula": params.aula,
                 }
             ),
-            url: 'https://wobbly-earwig.glitch.me/api/utenti/' + params.vUsername,
+            url: 'https://wobbly-earwig.glitch.me/api/frequentare/' + params.username,
             success: function (obj, textstatus) {
-                apriPannello("Modifica avvenuta con successo", "Modificato correttamente l'utente con username <b>" + params.vUsername + "</b>");
+                apriPannello("Modifica avvenuta con successo", "Modificata correttamente l'associazione con id <b>" + params.id + "</b>");
                 getData();
             },
             error: function () {
-                alert("Si è verificato un errore durante la modifica dell'utente " + params.vUsername + "\nRiprovare ad eseguire l'operazione.");
+                apriPannello("Si è verificato un errore", "Si è verificato un errore durante la modifica dell'associazione <b>" + params.id + "</b>\nRiprovare ad eseguire l'operazione.");
                 getData();
             }
         });

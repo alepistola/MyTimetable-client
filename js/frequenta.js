@@ -5,7 +5,24 @@ $(document).ready(function() {
     document.getElementById("idText").value = params.id;
     document.getElementById("usernameText").value = params.username;
     document.getElementById("aulaText").value = decodeURI(params.aula);
-    document.getElementById("codice_corsoText").innerHTML = decodeURI(params.descrizione);
+    $.ajax({
+        type: "GET",
+        contentType: 'application/json',
+        url: 'https://wobbly-earwig.glitch.me/api/corsi',
+        success: function (obj, textstatus) {
+            obj.forEach(d => {
+                if(d.codice == params.codice)
+                    document.getElementById("codice_corsoText").value = d.codice + " - " + d.titolo;
+                opt = document.createElement("option");
+                opt.innerHTML = d.codice + " - " + d.titolo;
+                opt.value = d.codice;
+                document.getElementById("codice_corsoText").appendChild(opt);
+            });
+        },
+        error: function () {
+            document.getElementById("codice_corsoText").value = "Err - course not found"
+        }
+    });
 });
 
 function getSearchParameters() {
