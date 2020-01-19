@@ -71,7 +71,7 @@
       </div>
 
       <!-- Nav Item - Tables -->
-      <li class="nav-item active">
+      <li class="nav-item">
         <a class="nav-link" href="corsi.html">
           <i class="fas fa-fw fa-table"></i>
           <span>Lista corsi</span></a>
@@ -86,7 +86,7 @@
       </div>
 
       <!-- Nav Item - associazioni -->
-      <li class="nav-item">
+      <li class="nav-item active">
         <a class="nav-link" href="frequentare.html">
           <i class="fas fa-book"></i>
           <span>Lista associazioni</span></a>
@@ -190,25 +190,23 @@
         <div class="container-fluid">
 
                 <!-- Page Heading -->
-                <h1 class="h3 mb-2 text-gray-800">Corsi universitari</h1>
-                <p class="mb-4">Da qui è possibile visualizzare, modificare ed eliminare tutti i corsi universitari disponibili. Per aggiungere un nuovo corso universitario bisogna compilare il form presente alla pagina <a  href="nuovo_corso.html">aggiungi un nuovo corso</a>.</p>
+                <h1 class="h3 mb-2 text-gray-800">Corsi seguiti dallo studente <b>alepistola</b></h1>
+                <p class="mb-4">Da qui è possibile visualizzare, modificare ed eliminare tutti i corsi universitari che si frequentano. Per aggiungere un nuovo corso universitario alla propria carriera bisogna compilare il form presente alla pagina <a  href="nuovo_frequenta.html">aggiungi un corso</a>.</p>
       
                 <!-- DataTales Example -->
                 <div class="card shadow mb-4">
                   <div class="card-header py-3">
-                    <h6 class="m-0 font-weight-bold text-primary">Elenco corsi disponibili</h6>
+                    <h6 class="m-0 font-weight-bold text-primary">Elenco corsi frequentati</h6>
                   </div>
                   <div class="card-body">
                     <div class="table-responsive">
                       <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                         <thead>
                           <tr>
-                            <th>Codice</th>
-                            <th>Titolo</th>
-                            <th>Descrizione</th>
-                            <th>CFU</th>
-                            <th>Programma</th>
-                            <th>Codice orario</th>
+                            <th>Id</th>
+                            <th>Username</th>
+                            <th>Codice corso</th>
+                            <th>Aula</th>
                           </tr>
                         </thead>
                       </table>
@@ -292,7 +290,7 @@
   <script src="js/jquery.redirect.js"></script>
 
   <!-- Page level custom scripts -->
-  <script src="js/datatables-corsi.js"></script>
+  <script src="js/datatables-frequentare.js"></script>
 
 </body>
 

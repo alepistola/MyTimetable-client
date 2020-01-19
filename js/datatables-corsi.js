@@ -116,11 +116,12 @@ $(document).ready(function() {
             ),
             url: 'https://wobbly-earwig.glitch.me/api/corsi/' + params.codice,
             success: function (obj, textstatus) {
-                apriPannello("Modifica avvenuta con successo", "Modificato correttamente il corso con codice " + params.codice);
+                apriPannello("Modifica avvenuta con successo", "Modificato correttamente il corso con codice <b>" + params.codice + "</b>");
                 getData();
             },
             error: function () {
                 alert("Si è verificato un errore durante la modifica del corso " + params.titolo + "\nRiprovare ad eseguire l'operazione.");
+                getData();
             }
         });
     }
@@ -141,11 +142,12 @@ $(document).ready(function() {
             ),
             url: 'https://wobbly-earwig.glitch.me/api/corsi',
             success: function (obj, textstatus) {
-                apriPannello("Inserimento avvenuto con successo", "Inserito correttamente il corso " + params.titolo);
+                apriPannello("Inserimento avvenuto con successo", "Inserito correttamente il corso <b>" + params.titolo + "</b>");
                 getData();
             },
             error: function () {
                 alert("Si è verificato un errore durante l'inserimento del corso " + params.titolo + "\nRiprovare ad eseguire l'operazione.");
+                getData();
             }
         });
     }
@@ -153,8 +155,6 @@ $(document).ready(function() {
     {
         getData();
     }
-
-    
 });
 
 function getData()
@@ -196,7 +196,7 @@ function getData()
                                       url: vurl,
                                       success: function(result){
                                           dataTable.row('.selected').remove().draw( false );
-                                          apriPannello("Eliminazione avvenuta con successo", "Eliminato correttamente il corso: " + rowData.titolo);
+                                          apriPannello("Eliminazione avvenuta con successo", "Eliminato correttamente il corso: <b>" + rowData.titolo + "</b>");
                                       },
                                       error: function(){
                                           alert("Si è verificato un errore durante la rimozione del corso: "+ rowData.titolo);
@@ -213,8 +213,12 @@ function getData()
         },
         error: function (obj, textstatus) {
             alert(obj.msg);
+            window.location.search = "";
         }
       });
+
+      pulisciSearch();
+
 }
 
 function apriPannello(data1, data)
@@ -256,5 +260,13 @@ function transformToAssocArray( prmstr ) {
       params[tmparr[0]] = tmparr[1].replace(/\+/gi, " ");
   }
   return params;
+}
+
+function pulisciSearch()
+{
+    if (window.location.search != "")
+    {
+        window.location.search == "";
+    }
 }
 
