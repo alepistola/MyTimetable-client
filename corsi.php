@@ -12,7 +12,7 @@
   <title>MyTimetable</title>
 
   <!-- Custom fonts for this template-->
-  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="lib/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
   <!-- Custom styles for this template-->
@@ -55,7 +55,7 @@
       </div>
 
       <!-- Nav Item - Charts -->
-      <li class="nav-item active">
+      <li class="nav-item">
         <a class="nav-link" href="utenti.html">
           <i class="fas fa-users"></i>
           <span> Lista utenti</span></a>
@@ -71,25 +71,10 @@
       </div>
 
       <!-- Nav Item - Tables -->
-      <li class="nav-item">
+      <li class="nav-item active">
         <a class="nav-link" href="corsi.html">
           <i class="fas fa-fw fa-table"></i>
           <span>Lista corsi</span></a>
-      </li>
-
-      <!-- Divider -->
-      <hr class="sidebar-divider d-none d-md-block">
-
-      <!-- Heading -->
-      <div class="sidebar-heading">
-        Frequentare
-      </div>
-
-      <!-- Nav Item - associazioni -->
-      <li class="nav-item">
-        <a class="nav-link" href="frequentare.html">
-          <i class="fas fa-book"></i>
-          <span>Lista associazioni</span></a>
       </li>
 
       <!-- Divider -->
@@ -205,24 +190,25 @@
         <div class="container-fluid">
 
                 <!-- Page Heading -->
-                <h1 class="h3 mb-2 text-gray-800">Utenti registrati</h1>
-                <p class="mb-4">Da qui è possibile visualizzare, modificare ed eliminare tutti i studenti (utenti) registrati alla piattaforma. Per aggiungere un nuovo studente (utente) bisogna compilare il form presente alla pagina <a  href="nuovo_utente.html">aggiungi un nuovo studente</a>.</p>
+                <h1 class="h3 mb-2 text-gray-800">Corsi universitari</h1>
+                <p class="mb-4">Da qui è possibile visualizzare, modificare ed eliminare tutti i corsi universitari disponibili. Per aggiungere un nuovo corso universitario bisogna compilare il form presente alla pagina <a  href="nuovo_corso.html">aggiungi un nuovo corso</a>.</p>
       
                 <!-- DataTales Example -->
                 <div class="card shadow mb-4">
                   <div class="card-header py-3">
-                    <h6 class="m-0 font-weight-bold text-primary">Elenco utenti registrati</h6>
+                    <h6 class="m-0 font-weight-bold text-primary">Elenco corsi disponibili</h6>
                   </div>
                   <div class="card-body">
                     <div class="table-responsive">
                       <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                         <thead>
                           <tr>
-                            <th>Username</th>
-                            <th>Nome</th>
-                            <th>Cognome</th>
-                            <th>Password</th>
-                            <th>Corso di studio</th>
+                            <th>Codice</th>
+                            <th>Titolo</th>
+                            <th>Descrizione</th>
+                            <th>CFU</th>
+                            <th>Programma</th>
+                            <th>Codice orario</th>
                           </tr>
                         </thead>
                       </table>
@@ -289,24 +275,24 @@
   </div>
 
   <!-- Bootstrap core JavaScript-->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
 
   <!-- Core plugin JavaScript-->
-  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+  <script src="lib/jquery-easing/jquery.easing.min.js"></script>
 
   <!-- Custom scripts for all pages-->
   <script src="js/sb-admin-2.min.js"></script>
 
   <!-- Page level plugins -->
-  <script src="vendor/datatables/jquery.dataTables.min.js"></script>
-  <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
+  <script src="lib/datatables/jquery.dataTables.min.js"></script>
+  <script src="lib/datatables/dataTables.bootstrap4.min.js"></script>
   <script src="https://cdn.datatables.net/select/1.3.0/js/dataTables.select.min.js"></script>
   <script src="https://cdn.datatables.net/buttons/1.5.6/js/dataTables.buttons.min.js"></script>
   <script src="js/jquery.redirect.js"></script>
 
   <!-- Page level custom scripts -->
-  <script src="js/datatables-utenti.js"></script>
+  <script src="js/datatables-corsi.js"></script>
 
 </body>
 

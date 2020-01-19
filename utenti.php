@@ -12,7 +12,7 @@
   <title>MyTimetable</title>
 
   <!-- Custom fonts for this template-->
-  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="lib/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
   <!-- Custom styles for this template-->
@@ -55,7 +55,7 @@
       </div>
 
       <!-- Nav Item - Charts -->
-      <li class="nav-item">
+      <li class="nav-item active">
         <a class="nav-link" href="utenti.html">
           <i class="fas fa-users"></i>
           <span> Lista utenti</span></a>
@@ -71,10 +71,25 @@
       </div>
 
       <!-- Nav Item - Tables -->
-      <li class="nav-item active">
+      <li class="nav-item">
         <a class="nav-link" href="corsi.html">
           <i class="fas fa-fw fa-table"></i>
           <span>Lista corsi</span></a>
+      </li>
+
+      <!-- Divider -->
+      <hr class="sidebar-divider d-none d-md-block">
+
+      <!-- Heading -->
+      <div class="sidebar-heading">
+        Frequentare
+      </div>
+
+      <!-- Nav Item - associazioni -->
+      <li class="nav-item">
+        <a class="nav-link" href="frequentare.html">
+          <i class="fas fa-book"></i>
+          <span>Lista associazioni</span></a>
       </li>
 
       <!-- Divider -->
@@ -189,55 +204,36 @@
         <!-- Begin Page Content -->
         <div class="container-fluid">
 
-            <!-- Page Heading -->
-			<h1 class="h3 mb-2 text-gray-800">Inserimento nuovo corso universitario: </h1><h1 id="titolo" class="h3 mb-2 text-primary"></h1>
-			<p class="mb-4">Specificare i valori qui sotto riportati e premere "salva" per confermare l'operazione, "annulla" per tornare indietro.</p>
-        
-            <form class="user" action="corsi.html" method="GET">
-
-                <div class="form-group row">
-                    <div class="col-sm-3 mb-3 mb-sm-0">
-                        <input  type="number" class="form-control form-control-user"  id="codiceText" name="codice" value="">
-                        <small class="form-text text-muted ml-4">Codice</small>
-                    </div>
-                    <div class="col-sm-6">
-                        <input type="text" class="form-control form-control-user" id="titoloText" name="titolo" value="">
-                        <small class="form-text text-muted ml-4">Titolo</small>
-                    </div>
-                </div>
-
-                <div class="form-group row">
-                    <textarea class="form-control form-control-user" id="descrizioneText" name="descrizione" rows="2"></textarea>
-                    <small class="form-text text-muted ml-4">Descrizione</small>
-                </div>
-
-                <div class="form-group row">
-                    <div class="col-sm-2 mb-3 mb-sm-0">
-                        <input type="number" class="form-control form-control-user" id="cfuText" name="cfu" value="">
-                        <small class="form-text text-muted ml-4">CFU</small>
-                    </div>
-                    <div class="col-sm-2">
-                        <input type="number" class="form-control form-control-user" id= "codice_orarioText" name="codice_orario" value="">
-                        <small class="form-text text-muted ml-4">Codice orario</small>
-                    </div>
-                </div>
-
-                <div class="form-group row">
-                    <textarea class="form-control form-control-user" id="programmaText" name="programma" rows="3"></textarea>
-                    <small class="form-text text-muted ml-4">Programma</small>
-                </div>
-
-                <div class="mb-2 mt-4 row col-sm-12 col-12 col-md-12 col-lg-6 col-xl-6" style="float:right">
-                    <input type="submit" class="btn btn-primary btn-user btn-block bottoni-update" id="annulla" name="typeOp" value="Annulla">
-                    <input type="submit" class="btn btn-primary btn-user btn-block bottoni-update" id="salva" name="typeOp" value="Inserisci">
-                </div>
-            </form>
-                
+                <!-- Page Heading -->
+                <h1 class="h3 mb-2 text-gray-800">Utenti registrati</h1>
+                <p class="mb-4">Da qui è possibile visualizzare, modificare ed eliminare tutti i studenti (utenti) registrati alla piattaforma. Per aggiungere un nuovo studente (utente) bisogna compilare il form presente alla pagina <a  href="nuovo_utente.html">aggiungi un nuovo studente</a>.</p>
       
-        </div>
+                <!-- DataTales Example -->
+                <div class="card shadow mb-4">
+                  <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">Elenco utenti registrati</h6>
+                  </div>
+                  <div class="card-body">
+                    <div class="table-responsive">
+                      <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                        <thead>
+                          <tr>
+                            <th>Username</th>
+                            <th>Nome</th>
+                            <th>Cognome</th>
+                            <th>Password</th>
+                            <th>Corso di studio</th>
+                          </tr>
+                        </thead>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+      
+              </div>
               <!-- /.container-fluid -->
       
-        </div>
+            </div>
             <!-- End of Main Content -->
 
       <!-- Footer -->
@@ -273,7 +269,6 @@
     </div>
   </div>
 
-
   <!-- Logout Modal-->
   <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
@@ -294,17 +289,24 @@
   </div>
 
   <!-- Bootstrap core JavaScript-->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
 
   <!-- Core plugin JavaScript-->
-  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+  <script src="lib/jquery-easing/jquery.easing.min.js"></script>
 
   <!-- Custom scripts for all pages-->
   <script src="js/sb-admin-2.min.js"></script>
 
   <!-- Page level plugins -->
+  <script src="lib/datatables/jquery.dataTables.min.js"></script>
+  <script src="lib/datatables/dataTables.bootstrap4.min.js"></script>
+  <script src="https://cdn.datatables.net/select/1.3.0/js/dataTables.select.min.js"></script>
+  <script src="https://cdn.datatables.net/buttons/1.5.6/js/dataTables.buttons.min.js"></script>
   <script src="js/jquery.redirect.js"></script>
+
+  <!-- Page level custom scripts -->
+  <script src="js/datatables-utenti.js"></script>
 
 </body>
 

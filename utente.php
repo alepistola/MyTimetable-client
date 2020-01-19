@@ -12,7 +12,7 @@
   <title>MyTimetable</title>
 
   <!-- Custom fonts for this template-->
-  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="lib/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
   <!-- Custom styles for this template-->
@@ -55,7 +55,7 @@
       </div>
 
       <!-- Nav Item - Charts -->
-      <li class="nav-item">
+      <li class="nav-item active">
         <a class="nav-link" href="utenti.html">
           <i class="fas fa-users"></i>
           <span> Lista utenti</span></a>
@@ -71,7 +71,7 @@
       </div>
 
       <!-- Nav Item - Tables -->
-      <li class="nav-item active">
+      <li class="nav-item">
         <a class="nav-link" href="corsi.html">
           <i class="fas fa-fw fa-table"></i>
           <span>Lista corsi</span></a>
@@ -190,39 +190,44 @@
         <div class="container-fluid">
 
             <!-- Page Heading -->
-			<h1 class="h3 mb-2 text-gray-800">Modifica l'associazione al corso: </h1><h1 id="titolo" class="h3 mb-2 text-primary"></h1>
+			<h1 class="h3 mb-2 text-gray-800">Modifica i dati dell'utente: </h1><h1 id="titolo" class="h3 mb-2 text-primary"></h1>
 			<p class="mb-4">Modifica i valori qui sotto riportati e premi "salva" per confermare l'operazione, "annulla" per tornare indietro</p>
         
-            <form class="user" action="frequentare.html" method="get">
+            <form class="user" action="utenti.html" method="get">
 
                 <div class="form-group row">
-                    <div class="col-sm-2 mb-3 mb-sm-0">
-                        <input readonly type="number" class="form-control form-control-user"  id="idText" name="id" value="">
-                        <small class="form-text text-muted ml-4">Id</small>
-                    </div>
                     <div class="col-sm-4 mb-3 mb-sm-0">
-                        <input readonly type="text" class="form-control form-control-user" id="usernameText" name="username" value="alepistola">
+                        <input type="text" class="form-control form-control-user"  id="usernameText" name="username" value="">
                         <small class="form-text text-muted ml-4">Username</small>
                     </div>
                 </div>
 
                 <div class="form-group row">
                     <div class="col-sm-4">
-                        <select class="custom-select combo-add" name="codice_corso" id="codice_corsoText">
-                            <option selected>Seleziona il corso</option>
-                        </select>
-                        <small class="form-text text-muted ml-4">Codice corso</small>
+                        <input type="text" class="form-control form-control-user" id="nomeText" name="nome" value="">
+                        <small class="form-text text-muted ml-4">Nome</small>
                     </div>
                     <div class="col-sm-4">
-                        <input type="text" class="form-control form-control-user" id= "aulaText" name="aula" value="">
-                        <small class="form-text text-muted ml-4">Aula</small>
+                        <input type="text" class="form-control form-control-user" id="cognomeText" name="cognome" value="">
+                        <small class="form-text text-muted ml-4">Cognome</small>
                     </div>
                 </div>
 
+                <div class="form-group row">
+                    <div class="col-sm-4 mb-3 mb-sm-0">
+                        <input type="text" class="form-control form-control-user" id="passwordText" name="password" value="">
+                        <small class="form-text text-muted ml-4">Password</small>
+                    </div>
+                    <div class="col-sm-4">
+                        <input type="text" class="form-control form-control-user" id= "corso_di_studioText" name="corso_di_studio" value="">
+                        <small class="form-text text-muted ml-4">Corso di studio</small>
+                    </div>
+                </div>
 
+                <input type="hidden" name="vUsername" value="" id="vUsername" />
                 <div class="mb-2 mt-4 row col-sm-12 col-12 col-md-12 col-lg-6 col-xl-6" style="float:right">
                     <input type="submit" class="btn btn-primary btn-user btn-block bottoni-update" name="typeOp" value="Annulla">
-                    <input type="submit" class="btn btn-primary btn-user btn-block bottoni-update" name="typeOp" value="Inserisci">
+                    <input type="submit" class="btn btn-primary btn-user btn-block bottoni-update" name="typeOp" value="Salva">
                 </div>
             </form>
                 
@@ -287,18 +292,20 @@
   </div>
 
   <!-- Bootstrap core JavaScript-->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
 
   <!-- Core plugin JavaScript-->
-  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+  <script src="lib/jquery-easing/jquery.easing.min.js"></script>
 
   <!-- Custom scripts for all pages-->
   <script src="js/sb-admin-2.min.js"></script>
-  <script src="js/nuovo_frequenta.js"></script>
 
+  <!-- Page level plugins -->
+  <script src="js/jquery.redirect.js"></script>
 
-
+  <!-- Page level custom scripts -->
+  <script src="js/utente.js"></script>
 
 </body>
 
