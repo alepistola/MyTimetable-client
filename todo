@@ -4,3 +4,4 @@ PER RELAZIONE
     - uno dei futuri improvement potrebbe essere creare un endpoint statistiche per ritornare tutte le informazioni utilizzate nella dashboard in quanto allo stato attuale delle cose, vengono compiute 3 richieste get
     - eliminara parametri nell'url quando usati
     - aggiorna i menù di ogni pagina
+    - modifica per trigger deploy
